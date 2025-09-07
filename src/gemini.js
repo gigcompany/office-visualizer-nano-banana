@@ -12,10 +12,13 @@ export async function generate3DRender({ theme, brandColor, floorMaterial, wallM
   const prompt = 
       `
       **Role:**
-      You are am expert 3D office space designer. Your task to create a perfect 3D render of the office space based on the inputs given.
+      You are am expert 3D floor plan visualization expert. 
       
       **Task:**
-      Create a 3D render of an office based on the following user choices and the provided 2D floor plan. 
+      Your task to create a perfect 3D floor plan visualization of the office space based on the inputs given.
+
+      **Instructions:**
+      Create a 3D floor plan visualization of an office based on the following user choices and the provided 2D floor plan. 
       
       The user has made the following choices for the design of their office:
       - Theme: ${theme}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from './assets/logo.png';
 import './App.css';
 import FloorPlanUpload from './FloorPlanUpload';
 import DesignPanel from './DesignPanel';
@@ -44,8 +45,45 @@ function App() {
     setIsGeneratingPhotorealistic(true);
 
     const prompts = [
-      `Generate a hyper-realistic, professional photograph of a modern office space, exactly as per the supplied 3D model. Retain the seating arrangement, table top materials and textures, floor materials and textures, wall materials and texture as per the 3D render. The camera is positioned at eye-level, approximately 6 feet from the ground, capturing the perspective of someone walking into the office and seeing the main workstation area. The design follows a [${designDetails.theme}] aesthetic, with the brand's signature [${designDetails.brandColor}] subtly integrated into the decor like privacy screens between the workstations. Add some lively posters on the hard walls (i.e.) non partition walls. Overhead, the ceiling is detailed with sleek, black AC ducts, discreet WiFi access points, and contemporary lighting that casts a warm, inviting glow. Lush potted plants are strategically placed to bring life and color to the environment. Important: The final output must be a photograph, not a 3D rendering. Ensure all labels from the 3D model are removed. The composition should be horizontal and at human eye-level, avoiding any high-angle or aerial perspectives. `,
-      `Generate a hyper-realistic, professional photograph of a modern office space, exactly as per the supplied 3D model. Retain the seating arrangement, table top materials and textures, floor materials and textures, wall materials and texture as per the 3D render. The camera is positioned at eye-level, approximately 6 feet from the ground, capturing the perspective of someone walking into the office and seeing the main collaboration or collab or meeting room. Collaboration areas are labeled "Colab Area" or "Collaboration Area" in the 3D Render. Meting rooms are labled "PAX Meeting" or "Meeting Room" in the 3D render. The design follows a [${designDetails.theme}] aesthetic, with the brand's signature [${designDetails.brandColor}] subtly integrated into the decor like privacy screens between the workstations. Add some lively posters on the hard walls (i.e.) non partition walls. Overhead, the ceiling is detailed with sleek, black AC ducts, discreet WiFi access points, and contemporary lighting that casts a warm, inviting glow. Lush potted plants are strategically placed to bring life and color to the environment. Important: The final output must be a photograph, not a 3D rendering. Ensure all labels from the 3D model are removed. The composition should be horizontal and at human eye-level, avoiding any high-angle or aerial perspectives. `,
+      `** Role ** 
+      Professional architectural photographer
+      
+      ** Task ** 
+      Generate a hyper-realistic, professional photograph of a modern office space, exactly as per the supplied 3D floor plan visualization aerial image .
+      
+      ** Instructions ** 
+      Retain the seating arrangement, table top materials and textures, floor materials and textures, wall materials and texture as per the 3D floor plan visualization. 
+      The camera is positioned at eye-level, approximately 6 feet from the ground, capturing the perspective of someone walking into the office and seeing the main workstation area. Keep all 3D objects in right proportion. 
+      The design follows a [${designDetails.theme}] aesthetic, with the brand's signature [${designDetails.brandColor}] subtly integrated into the decor like privacy screens between the workstations. 
+      Add some lively posters on the hard walls (i.e.) non partition walls. 
+      Overhead, the ceiling is detailed with sleek, black AC ducts, discreet WiFi access points, and contemporary lighting that casts a warm, inviting glow. 
+      Lush potted plants are strategically placed to bring life and color to the environment. 
+      
+      ** Important ** 
+      The final output must be a photograph, not a 3D floor plan visualization. 
+      Ensure all labels from the 3D floor plan visualization are removed. 
+      Do not change the dimensions or the layout of the rooms and the positions of the walls or the number of tables and chairs. These should be exactly like in the 3D floor plan visualization.
+      The composition should be horizontal and at human eye-level, avoiding any high-angle or aerial perspectives. `,
+      `** Role ** 
+      Professional architectural photographer
+
+      ** Task ** 
+      Generate a hyper-realistic, professional photograph of a modern office space, exactly as per the supplied 3D floor plan visualization. 
+      
+      ** Instructions ** 
+      Retain the seating arrangement, table top materials and textures, floor materials and textures, wall materials and texture as per the 3D floor plan visualization. 
+      The camera is positioned at eye-level, approximately 6 feet from the ground, capturing the perspective of someone walking into the office and seeing the main collaboration or collab or meeting room. 
+      Collaboration areas are labeled "Colab Area" or "Collaboration Area" in the 3D floor plan visualization. Meeting rooms are labled "PAX Meeting" or "Meeting Room" in the 3D floor plan visualization. 
+      Keep all 3D objects in right proportion. 
+      The design follows a [${designDetails.theme}] aesthetic, with the brand's signature [${designDetails.brandColor}] subtly integrated into the decor like privacy screens between the workstations. 
+      Add some lively posters on the hard walls (i.e.) non partition walls. 
+      Overhead, the ceiling is detailed with sleek, black AC ducts, discreet WiFi access points, and contemporary lighting that casts a warm, inviting glow. Lush potted plants are strategically placed to bring life and color to the environment. 
+      
+      ** Important **  
+      The final output must be a photograph, not a 3D rendering. 
+      Ensure all labels from the 3D floor plan visualization are removed. 
+      Do not change the dimensions or the layout of the rooms and the positions of the walls or the number of tables and chairs. These should be exactly like in the 3D floor plan visualization.
+      The composition should be horizontal and at human eye-level, avoiding any high-angle or aerial perspectives. `,
       // `You are an expert 3D designer. You will be given a 3D render. Your task is to generate a photorealistic landscape image of the office space from the horizontal perspective of a human as they enter one of the cabins. Keep the angle of view to that of a human of height 6 feet. Add humans working in this office. Add AC ducts and WiFi devices on the roof. Remove all labels from the 3D render. Make the AC ducts black in color. Also add lighting fixtures. The office theme is ${designDetails.theme}. Stick to te element of the 3D render. Do not create new elements. Stick to the theme. Dont generate an aereal view. `
     ];
 
@@ -115,7 +153,7 @@ function App() {
       <div className="main-content flex-1 flex flex-col">
         {/* Header */}
         <header className="app-header flex justify-between items-center p-4">
-          <h1 className="text-xl font-bold">Office Visualizer</h1>
+          <img src={logo} alt="Office Visualizer Logo" className="h-10" />
         </header>
 
         {/* Image Carousel */}
