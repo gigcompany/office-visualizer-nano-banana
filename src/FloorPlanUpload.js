@@ -25,7 +25,7 @@ const FloorPlanUpload = ({ onImageUpload }) => {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <h2 className="text-xl font-semibold mb-4">2D Floor Plan</h2>
+      <h2 className="font-semibold mb-2">2D Floor Plan</h2>
       <div className="bg-white p-6 rounded-lg shadow-lg w-full h-[800px] overflow-hidden flex flex-col">
         <div
           className="w-full h-64 border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 text-xl"

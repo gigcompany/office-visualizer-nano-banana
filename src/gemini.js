@@ -27,7 +27,7 @@ export async function generate3DRender({ theme, brandColor, floorMaterial, wallM
       If theme is minimalist, use minimalist design principles to create a 3D render of the office space. Use white color laminate for the table tops.
       If theme is industrial, use industrial design principles to create a 3D render of the office space. Use white color laminate for the table tops.
 
-      If floor material is carpet, use grey hatch pattern to generage the floor of the 3D render of the entire office space. If industrial theme is choosen then make the carpet a darker shade of grey.
+      If floor material is carpet, use grey hatch pattern to generage the floor of the 3D render of the entire office space. The carpet color for the passage and the seating area should be using different shades and patterns. If industrial theme is choosen then make the carpet a darker shade of grey.
       If floor material is wood, use walnut wood texture to generate the floor of the passages in the 3D render of the office space. Use grey hatch carpet patter for the floor space under the seating and rooms.
       If floor material is tiles, use marble square tiles design principles to generate the floor of the 3D render of the office space. Use grey hatch carpet patter for the floor space under the seating and rooms.
 
@@ -35,13 +35,15 @@ export async function generate3DRender({ theme, brandColor, floorMaterial, wallM
       If wall material is bricks, use red bricks to design the outer walls of the 3D render of the office space.
       If wall material is glass, use transparent glass to design the inner walls of the 3D render of the office space.
 
-      In all cases the inner walls will always be glass.
-
-      Based on these choices and the floor plan, generate a 3D render image of the office. Do not create a photorealistic view yet.
+      Based on these choices and the floor plan, generate a 3D render image of the office. Do not create a photorealistic photo yet.
+      
       ** IMPORTANT **
+      In all cases the inner walls will always be glass. Add potted plants that align with the theme of the office. 
+      If the 2D floor plan has collaboration areas then add soft furnishings that match the theme of the office.
       Preserve the dimensions of the original image
       Retain the labels (if any) of the original image
       Use modern hybraulic chairs with headrest for the seating
+      Ignore any floor colors that you see in the 2D floor plan. 
       `;
 
   try {

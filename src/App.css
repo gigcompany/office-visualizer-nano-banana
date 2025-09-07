@@ -1,28 +1,26 @@
 .App {
   text-align: center;
+  background-color: #F9F9F9;
 }
 
 .design-panel {
   width: 0;
   overflow-y: hidden;
   transition: width 0.3s ease-in-out;
-  background-color: #f0f0f0;
+  background-color: #FFFFFF;
   padding: 0;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left side */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the right side */
 }
 
 .design-panel.open {
-  width: 400px; /* Adjust as needed */
-  padding: 1rem;
+  width: 360px; /* Adjust as needed */
+  padding: 0;
   overflow-y: auto;
 }
 
 .main-content {
-  transition: margin-right 0.3s ease-in-out; /* Changed to margin-right */
-}
-
-.design-panel.open + .main-content {
-  margin-right: 0; /* No margin when open */
+  transition: margin-left 0.3s ease-in-out;
+  background-color: #F9F9F9;
 }
 
 .image-carousel {
@@ -37,8 +35,9 @@
 
 /* Basic styling for header and button for visibility */
 .app-header {
-  background-color: #282c34;
-  color: white;
+  background-color: #FFFFFF; /* White header */
+  color: #000000; /* Black text */
+  border-bottom: 1px solid #E0E0E0; /* Light border */
 }
 
 .floating-design-toggle-button {
