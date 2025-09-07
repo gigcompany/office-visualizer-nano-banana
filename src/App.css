@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.design-panel {
+  width: 0;
+  overflow-y: hidden;
+  transition: width 0.3s ease-in-out;
+  background-color: #f0f0f0;
+  padding: 0;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left side */
+}
+
+.design-panel.open {
+  width: 400px; /* Adjust as needed */
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.main-content {
+  transition: margin-right 0.3s ease-in-out; /* Changed to margin-right */
+}
+
+.design-panel.open + .main-content {
+  margin-right: 0; /* No margin when open */
+}
+
+.image-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+}
+
+/* Basic styling for header and button for visibility */
+.app-header {
+  background-color: #282c34;
+  color: white;
+}
+
+.floating-design-toggle-button {
+  z-index: 1000;
+  width: 56px; /* Adjust size as needed */
+  height: 56px; /* Adjust size as needed */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* Adjust icon size */
+}
