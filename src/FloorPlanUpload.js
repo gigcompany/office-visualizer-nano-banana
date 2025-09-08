@@ -51,12 +51,15 @@ const FloorPlanUpload = ({ onImageUpload }) => {
       <div className="bg-white p-6 rounded-lg shadow-lg w-full flex flex-col">
       <div className="flex flex-col items-center w-full mb-4">
             <h3 className="font-semibold mb-2">Select a sample</h3>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-6 gap-4">
                 {sampleImages.map((image) => (
                     <div key={image.name} className="cursor-pointer border-2 border-gray-300 hover:border-indigo-500 rounded-lg overflow-hidden" onClick={() => handleSampleImageClick(image.src)}>
                         <img src={image.src} alt={image.name} className="w-full h-auto" />
                     </div>
                 ))}
+            </div>
+            <div>
+            <p>OR</p>
             </div>
         </div>
         <div
@@ -67,7 +70,10 @@ const FloorPlanUpload = ({ onImageUpload }) => {
           {imageUrl ? (
             <img src={imageUrl} alt="Floor Plan" className="max-h-full" />
           ) : (
+            <>
+            <br/>
             <p>Drag and drop your floor plan image here</p>
+            </>
           )}
         </div>
 

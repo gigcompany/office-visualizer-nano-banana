@@ -15,6 +15,7 @@ In the project directory, first install all dependencies
 
 ### `npm install`
 
+Setup up the .env file in the root of the project with the variable REACT_APP_GEMINI_API_KEY. Put your Gemini API key in the value of the variable.
 
 Then you can run:
 
